@@ -21,4 +21,8 @@ public class PalsService {
     public List<Pals> findPalsByType(String typeName) {
         return palsRepository.findPalsByTypesName(typeName);
     }
+
+    public List<Pals> findsPalsBySuitability(String suitabilityName) {
+        return palsRepository.findPalsBySuitabilityType(suitabilityName);
+    }
 }

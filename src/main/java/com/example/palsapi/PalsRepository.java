@@ -20,4 +20,6 @@ public interface PalsRepository extends MongoRepository<Pals, ObjectId> {
     List<Pals> findPalsByName(String name);
 
     List<Pals> findPalsByTypesName(String typeName);
+
+    List<Pals> findPalsBySuitabilityType(String suitabilityName);
 }

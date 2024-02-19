@@ -28,4 +28,9 @@ public class PalsController {
     public ResponseEntity<List<Pals>> getPalsByType(@PathVariable String typeName) {
         return new ResponseEntity<List<Pals>>(palsService.findPalsByType(typeName), HttpStatus.OK);
     }
+
+    @GetMapping("/suitability/{suitabilityName}")
+    public ResponseEntity<List<Pals>> getPalsBySuitability(@PathVariable String suitabilityName) {
+        return new ResponseEntity<List<Pals>>(palsService.findsPalsBySuitability(suitabilityName), HttpStatus.OK);
+    }
 }
