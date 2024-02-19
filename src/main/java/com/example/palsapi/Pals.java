@@ -26,7 +26,7 @@ public class Pals {
     private String wiki;
     private List<PalsType> types;
     private String imageWiki;
-    private List<Map<String, String>> suitability;
+    private List<PalsSuitability> suitability;
     private List<String> drops;
     private Map<String, Object> aura;
     private List<Map<String, String>> skills;
