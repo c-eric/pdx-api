@@ -14,7 +14,11 @@ public class PalsService {
         return palsRepository.findAll();
     }
 
-    public List<Pals> findPalsByType(String name) {
-        return palsRepository.findPalsByTypesName(name);
+    public List<Pals> findPalsByName(String name) {
+        return palsRepository.findPalsByName(name);
+    }
+
+    public List<Pals> findPalsByType(String typeName) {
+        return palsRepository.findPalsByTypesName(typeName);
     }
 }

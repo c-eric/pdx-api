@@ -19,8 +19,13 @@ public class PalsController {
         return new ResponseEntity<List<Pals>>(palsService.findAllPals(),HttpStatus.OK);
     }
 
-    @GetMapping("/type/{name}")
-    public ResponseEntity<List<Pals>> getPalsByType(@PathVariable String name) {
-        return new ResponseEntity<List<Pals>>(palsService.findPalsByType(name), HttpStatus.OK);
+    @GetMapping("/name/{name}")
+    public ResponseEntity<List<Pals>> getPalsByName(@PathVariable String name) {
+        return new ResponseEntity<List<Pals>>(palsService.findPalsByName(name), HttpStatus.OK);
+    }
+
+    @GetMapping("/type/{typeName}")
+    public ResponseEntity<List<Pals>> getPalsByType(@PathVariable String typeName) {
+        return new ResponseEntity<List<Pals>>(palsService.findPalsByType(typeName), HttpStatus.OK);
     }
 }
