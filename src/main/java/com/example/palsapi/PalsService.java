@@ -22,6 +22,10 @@ public class PalsService {
         return palsRepository.findPalsByTypesName(typeName);
     }
 
+    public List<Pals> findPalsByMultipleTypes(String typeName1, String typeName2) {
+        return palsRepository.findPalsByTypesName(typeName1, typeName2);
+    }
+
     public List<Pals> findsPalsBySuitability(String suitabilityName) {
         return palsRepository.findPalsBySuitabilityType(suitabilityName);
     }

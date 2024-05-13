@@ -34,6 +34,12 @@ public class PalsController {
     }
 
     @CrossOrigin(origins = "http://127.0.0.1:5500")
+    @GetMapping("/types/{typeName1}-{typeName2}")
+    public ResponseEntity<List<Pals>> getPalsByMultipleTypes(@PathVariable String typeName1, @PathVariable String typeName2) {
+        return new ResponseEntity<List<Pals>>(palsService.findPalsByMultipleTypes(typeName1, typeName2), HttpStatus.OK);
+    }
+
+    @CrossOrigin(origins = "http://127.0.0.1:5500")
     @GetMapping("/suitability/{suitabilityName}")
     public ResponseEntity<List<Pals>> getPalsBySuitability(@PathVariable String suitabilityName) {
         return new ResponseEntity<List<Pals>>(palsService.findsPalsBySuitability(suitabilityName), HttpStatus.OK);

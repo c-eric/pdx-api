@@ -21,5 +21,11 @@ public interface PalsRepository extends MongoRepository<Pals, ObjectId> {
 
     List<Pals> findPalsByTypesName(String typeName);
 
+    // https://www.mongodb.com/docs/manual/tutorial/query-arrays/
+    // https://www.mongodb.com/docs/manual/reference/operator/query/elemMatch/#mongodb-query-op.-elemMatch
+    // @Query("{ types: { $elemMatch: { 'name': { $regex: ?0 } }, $elemMatch: { 'name': { $regex: ?1 } } } }")
+    @Query("{ $and: [{ 'types.name': { $regex: ?0 } }, { 'types.name': { $regex: ?1 } }] }")
+    List<Pals> findPalsByTypesName(String typeName1, String typeName2);
+
     List<Pals> findPalsBySuitabilityType(String suitabilityName);
 }
