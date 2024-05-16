@@ -9,8 +9,11 @@ This Spring Boot Application serves as the backend for the [Pal-dex Website](htt
   - Get pals by name:
     - Endpoint: `GET /name/{name}`
     - Description: Retrieves pals by their name.
-  - Get pals by type:
+  - Get pals by 1 type:
     - Endpoint: `GET /type/{typeName}`
+    - Description: Retrieves pals by their type.
+  - Get pals by 2 types:
+    - Endpoint: `GET /types/{typeName1}-{typeName2}`
     - Description: Retrieves pals by their type.
   - Get pals by suitability:
     - Endpoint: `GET /suitability/{suitabilityName}`
