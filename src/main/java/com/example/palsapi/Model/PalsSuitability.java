@@ -1,4 +1,4 @@
-package com.example.palsapi;
+package com.example.palsapi.Model;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;

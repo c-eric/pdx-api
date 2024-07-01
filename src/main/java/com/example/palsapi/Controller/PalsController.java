@@ -1,5 +1,7 @@
-package com.example.palsapi;
+package com.example.palsapi.Controller;
 
+import com.example.palsapi.Model.Pals;
+import com.example.palsapi.Service.PalsService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;

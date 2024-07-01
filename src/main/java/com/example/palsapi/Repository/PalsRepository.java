@@ -1,5 +1,6 @@
-package com.example.palsapi;
+package com.example.palsapi.Repository;
 
+import com.example.palsapi.Model.Pals;
 import org.bson.types.ObjectId;
 import org.springframework.data.mongodb.repository.MongoRepository;
 import org.springframework.data.mongodb.repository.Query;

@@ -1,5 +1,7 @@
-package com.example.palsapi;
+package com.example.palsapi.Service;
 
+import com.example.palsapi.Model.Pals;
+import com.example.palsapi.Repository.PalsRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
